@@ -10,7 +10,11 @@ app.use(express.static('public'));
 
 app.use(require('./routes'));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/social-network-api', { useNewUrlParser: true, useUnifiedTopology: true});
+// Tells Mongoose which database to connect to, per Boot Camp module 18.
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/social-network-api', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
 mongoose.set('debug', true);
 

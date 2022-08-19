@@ -36,3 +36,5 @@ This project is licensed under the MIT license.
 https://mongoosejs.com/docs/api.html#schema-string-js
 
 Ramon22. (2014, June 13). *Mongoose - validate email syntax.* Stack Overflow. [https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax](https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax)
+
+Boot Camp Module 18
