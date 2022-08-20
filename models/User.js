@@ -16,31 +16,31 @@ UserSchema = new Schema(
             lowercase: true,
             // Reference: Ramon22
             match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, 'Please enter a valid email address.']
-        },
-        thoughts: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'Thought'
-            }
-        ],
-        friends: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'User'
-            }
-        ]
-    },
-    {
-        toJSON: {
-            virtuals: true,
-        },
-        id: false
+        }
+        // thoughts: [
+        //     {
+        //         type: Schema.Types.ObjectId,
+        //         ref: 'Thought'
+        //     }
+        // ],
+        // friends: [
+        //     {
+        //         type: Schema.Types.ObjectId,
+        //         ref: 'User'
+        //     }
+        // ]
     }
+    // {
+    //     toJSON: {
+    //         virtuals: true,
+    //     },
+    //     id: false
+    // }
 );
 
-UserSchema.virtual('friendCount').get(function() {
-    return this.friends.reduce((total, user) => total + user.friends.length + 1, 0);
-});
+// UserSchema.virtual('friendCount').get(function() {
+//     return this.friends.reduce((total, user) => total + user.friends.length + 1, 0);
+// });
 
 const User = model('User', UserSchema);
 
