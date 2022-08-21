@@ -30,10 +30,10 @@ const thoughtController = {
     // POST /api/thoughts create new thought
     createThought({ params, body }, res) {
         Thought.create(body)
-            .then(({ _id }) => {
+            .then((dbThoughtData) => {
                 return User.findOneAndUpdate(
                     { _id: params.userId },
-                    { $push: { thoughts: _id } },
+                    { $push: { thoughts: dbThoughtData._id } },
                     { new: true }
                 );
             })
@@ -76,8 +76,8 @@ const thoughtController = {
     // add reaction to thought
     addReaction({ params, body }, res) {
         Thought.findOneAndUpdate(
-            { _id: params.thoughtId },
-            { $push: {reactions: body } },
+            { _id: params.id },
+            { $push: { reactions: body } },
             { new: true, runValidators: true }
         )
             .then(dbThoughtData => {
@@ -93,7 +93,7 @@ const thoughtController = {
     // remove reaction
     removeReaction({ params }, res) {
         Thought.findOneAndUpdate(
-            { _id: params.thoughId },
+            { _id: params.id },
             { $pull: { reactions: { reactionId: params.reactionId } } },
             { new: true }
         )
