@@ -4,7 +4,7 @@
 ## Description
 This is the back end API for a social media app that uses a NoSQL database. Routes can be tested in Insomnia.
 
-Walkthough Video: []().
+Walkthough Video: []()
 
 ## Table of Contents
 - [Installation](#installation)
@@ -32,7 +32,7 @@ User:
 ```
 {
     "username" : "chandler",
-    "email" : "chander@email.com"
+    "email" : "chandler@email.com"
 }
 ``` 
 - Use a PUT route to update a user using the user's ID. Example: http://localhost:3001/api/users/6300fe4ced1f42e04139d96b with JSON body `{ "username" : "chandlerbing" }`
@@ -49,8 +49,8 @@ Thought:
 ```
 {
     "thoughtText" : "Can I interest you in a sarcasic comment?",
-	"username" : "chandler",
-	"userId" : "6300fe4ced1f42e04139d96b"
+    "username" : "chandler",
+    "userId" : "6300fe4ced1f42e04139d96b"
 }
 ```
 - Use a PUT route to update a thought using the thought ID. Example: http://localhost:3001/api/thoughts/630107be3c82c66e18cd7763 with JSON body `{ "thoughtText" : "I'm not good at the advice. Can I interest you in a sarcastic comment?" }`
