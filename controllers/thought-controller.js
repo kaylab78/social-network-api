@@ -32,7 +32,7 @@ const thoughtController = {
         Thought.create(body)
             .then((dbThoughtData) => {
                 return User.findOneAndUpdate(
-                    { _id: params.userId },
+                    { _id: body.userId },
                     { $push: { thoughts: dbThoughtData._id } },
                     { new: true }
                 );
@@ -42,7 +42,7 @@ const thoughtController = {
                     res.status(404).json({ message: 'No user found with this id.' });
                     return;
                 }
-                res.json(dbUserData);
+                res.json({ message: 'Thought succcessfully created!' });
             })
             .catch(err => res.json(err));
     },
