@@ -4,7 +4,7 @@
 ## Description
 This is the back end API for a social media app that uses a NoSQL database. Routes can be tested in Insomnia.
 
-Walkthough Video: []()
+Walkthough Video: [https://youtu.be/eYGa59kQyzg](https://youtu.be/eYGa59kQyzg)
 
 ## Table of Contents
 - [Installation](#installation)
@@ -25,7 +25,7 @@ To start the server and test the API routes, type `node server` in the command-l
 
 Once the server has started, navigate to Insomnia. Test the following routes.
 
-User:
+**User:**
 - Use a GET route with http://localhost:3001/api/users to read all of the users in the database.
 - Use a GET route with an ID to read just one user. Example: http://localhost:3001/api/users/6300fe4ced1f42e04139d96b
 - Use a POST route to create a new user. Use http://localhost:3001/api/users and JSON in the body. Example:
@@ -40,13 +40,13 @@ User:
 
 ![The screen shows the Insomnia app with example GET, POST, PUT and DELETE routes running successfully.](/assets/screenshot-1.gif)
 
-Friend:
+**Friend:**
 - Use a POST route to add a friend to the user's friend list. Example: http://localhost:3001/api/users/6300fe4ced1f42e04139d96b/friends/6302a3561429ea87a5b6a36e where 6300fe4ced1f42e04139d96b is the user's ID and 6302a3561429ea87a5b6a36e is the friend's ID.
-- User a DELETE route to remove a friend from the user's friend list. Example: http://localhost:3001/api/users/6300fe4ced1f42e04139d96b/friends/6302a3561429ea87a5b6a36e where 6300fe4ced1f42e04139d96b is the user's ID and 6302a3561429ea87a5b6a36e is the friend's ID.
+- Use a DELETE route to remove a friend from the user's friend list. Example: http://localhost:3001/api/users/6300fe4ced1f42e04139d96b/friends/6302a3561429ea87a5b6a36e where 6300fe4ced1f42e04139d96b is the user's ID and 6302a3561429ea87a5b6a36e is the friend's ID.
 
 ![The screen shows the Insomnia app with example POST and DELETE routes running successfully.](/assets/screenshot-3.gif)
 
-Thought:
+**Thought:**
 - Use a GET route with http://localhost:3001/api/thoughts to read all of the thoughts in the database.
 - Use a GET route with an ID to read just one thought. Example: http://localhost:3001/api/thoughts/630107be3c82c66e18cd7763
 - Use a POST route to create a new thought. Use http://localhost:3001/api/thoughts and JSON in the body. Example:
@@ -62,7 +62,7 @@ Thought:
 
 ![The screen shows the Insomnia app with example GET, POST, PUT and DELETE routes running successfully.](/assets/screenshot-2.gif)
 
-Reaction:
+**Reaction:**
 - Use a POST route to create a reaction. Example: http://localhost:3001/api/thoughts/63027c4b373017473d5b491e/reactions with JSON body
 ```
 {
