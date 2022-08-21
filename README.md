@@ -41,8 +41,8 @@ User:
 ![The screen shows the Insomnia app with example GET, POST, PUT and DELETE routes running successfully.](/assets/screenshot-1.gif)
 
 Friend:
-- Use a POST route to add a friend to the user's friend list.
-- User a DELETE route to remove a friend from the user's friend list.
+- Use a POST route to add a friend to the user's friend list. Example: http://localhost:3001/api/users/6300fe4ced1f42e04139d96b/friends/6302a3561429ea87a5b6a36e where 6300fe4ced1f42e04139d96b is the user's ID and 6302a3561429ea87a5b6a36e is the friend's ID.
+- User a DELETE route to remove a friend from the user's friend list. Example: http://localhost:3001/api/users/6300fe4ced1f42e04139d96b/friends/6302a3561429ea87a5b6a36e where 6300fe4ced1f42e04139d96b is the user's ID and 6302a3561429ea87a5b6a36e is the friend's ID.
 
 ![The screen shows the Insomnia app with example POST and DELETE routes running successfully.](/assets/screenshot-3.gif)
 
@@ -63,8 +63,14 @@ Thought:
 ![The screen shows the Insomnia app with example GET, POST, PUT and DELETE routes running successfully.](/assets/screenshot-2.gif)
 
 Reaction:
-- Use a POST route to create a reaction.
-- Use a DELETE route to remove a reaction using the reaction's ID.
+- Use a POST route to create a reaction. Example: http://localhost:3001/api/thoughts/63027c4b373017473d5b491e/reactions with JSON body
+```
+{
+    "reactionBody" : "Hilarious"
+    "username" : "monica"
+}
+```
+- Use a DELETE route to remove a reaction using the reaction's ID. Example: http://localhost:3001/api/thoughts/63027c4b373017473d5b491e/reactions/6302a66abac57a5252d6df83 where 63027c4b373017473d5b491e is the thought ID and 6302a66abac57a5252d6df83 is the reaction ID.
 
 ![The screen shows the Insomnia app with example POST and DELETE routes running successfully.](/assets/screenshot-4.gif)
 
