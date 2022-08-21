@@ -38,9 +38,13 @@ User:
 - Use a PUT route to update a user using the user's ID. Example: http://localhost:3001/api/users/6300fe4ced1f42e04139d96b with JSON body `{ "username" : "chandlerbing" }`
 - Use a DELETE route to delete a user using their ID. Example: http://localhost:3001/api/users/6300fe4ced1f42e04139d96b
 
+![The screen shows the Insomnia app with example GET, POST, PUT and DELETE routes running successfully.](/assets/screenshot-1.gif)
+
 Friend:
 - Use a POST route to add a friend to the user's friend list.
 - User a DELETE route to remove a friend from the user's friend list.
+
+![The screen shows the Insomnia app with example POST and DELETE routes running successfully.](/assets/screenshot-3.gif)
 
 Thought:
 - Use a GET route with http://localhost:3001/api/thoughts to read all of the thoughts in the database.
@@ -56,9 +60,13 @@ Thought:
 - Use a PUT route to update a thought using the thought ID. Example: http://localhost:3001/api/thoughts/630107be3c82c66e18cd7763 with JSON body `{ "thoughtText" : "I'm not good at the advice. Can I interest you in a sarcastic comment?" }`
 - Use a DELETE route to delete a thought using the thought ID. Example: http://localhost:3001/api/thoughts/630107be3c82c66e18cd7763
 
+![The screen shows the Insomnia app with example GET, POST, PUT and DELETE routes running successfully.](/assets/screenshot-2.gif)
+
 Reaction:
 - Use a POST route to create a reaction.
 - Use a DELETE route to remove a reaction using the reaction's ID.
+
+![The screen shows the Insomnia app with example POST and DELETE routes running successfully.](/assets/screenshot-4.gif)
 
 ## Technologies
 - [Express.js](https://expressjs.com/)
@@ -76,6 +84,8 @@ This project is licensed under the MIT license.
 
 ## Credits
 Boot Camp Module 18
+
+Boot Camp Tutor Meg Meyers
 
 *Guides.* (n.d.) Mongoose. Retrieved August 19, 2022, from [https://mongoosejs.com/docs/guides.html](https://mongoosejs.com/docs/guides.html)
 
